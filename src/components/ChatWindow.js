@@ -49,7 +49,7 @@ export default function ChatWindow() {
         <>
             <div className="border rounded-lg bg-base-300 m-5 grow overflow-auto">
                 {prevData.map(data => (
-                    <Message message={data.message} key={data.id}/>
+                    <Message message={data.message} key={data.id} created_at={data.created_at}/>
                 ))}
                 <div ref={messagesEndRef}></div>
             </div>
